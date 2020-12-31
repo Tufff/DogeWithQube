@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObsticleScript : MonoBehaviour
+public class ObsticleSpawnTrigger : MonoBehaviour
 {
+    ObsticleSpawner obsticleSpawner;
     // Start is called before the first frame update
     void Start()
     {
-        
+        obsticleSpawner = GameObject.Find("GameController").GetComponent<ObsticleSpawner>();
     }
 
     // Update is called once per frame
@@ -15,20 +16,12 @@ public class ObsticleScript : MonoBehaviour
     {
         
     }
-    
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.CompareTag("Player"))
-        {
-            Time.timeScale = 0f;
-        }
-    }
-    /*
+
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.CompareTag("Obsticle"))
         {
-            Time.timeScale = 0f;
+            obsticleSpawner.SpawnRowOfObsticles();
         }
-    }*/
+    }
 }

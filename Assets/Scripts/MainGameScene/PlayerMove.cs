@@ -32,7 +32,7 @@ public class PlayerMove : MonoBehaviour
         //Debug.DrawRay(mousePosNearInWorld, mousePosFarInWorld - mousePosNearInWorld, Color.green);
         if (Physics.Raycast(new Ray(mousePosNearInWorld, mousePosFarInWorld - mousePosNearInWorld), out raycastHit, 1000f, layerHitNumber))
         {
-            transform.position = new Vector3(raycastHit.point.x, transform.position.y, transform.position.z);
+            rb.MovePosition(new Vector3(raycastHit.point.x, transform.position.y, transform.position.z));
         }
     }
 }
