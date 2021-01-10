@@ -19,7 +19,19 @@ public class TunnelDestroyerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Tunnel"))
+        string tag = other.tag;
+        switch (tag)
+        {
+            case "Tunnel":
+                Destroy(other.gameObject);
+                tunnelSpawner.SpawnRandTunnel(new Vector3(0f, -2f, 180f));
+                break;
+            case "Obsticle":
+            case "Coin":
+                Destroy(other.gameObject);
+                break;
+        }
+        /*if (other.CompareTag("Tunnel"))
         {
             Destroy(other.gameObject);
             tunnelSpawner.SpawnRandTunnel(new Vector3(0f, -2f, 180f));
@@ -27,6 +39,6 @@ public class TunnelDestroyerScript : MonoBehaviour
         else if (other.CompareTag("Obsticle"))
         {
             Destroy(other.gameObject);
-        }
+        }*/
     }
 }

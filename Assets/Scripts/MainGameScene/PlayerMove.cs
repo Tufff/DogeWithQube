@@ -6,6 +6,10 @@ public class PlayerMove : MonoBehaviour
 {
     Rigidbody rb;
     public float speed = 0.2f;
+    [SerializeField]
+    float maxDistanceFromCentre = 3;
+
+    float halfOfWidth;
 
     Vector3 mousePosFarClipPlane;
     Vector3 mousePosNearClipPlane;
@@ -16,6 +20,7 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        halfOfWidth = GetComponent<Renderer>().bounds.size.x / 2;
     }
 
     // Update is called once per frame
@@ -32,7 +37,16 @@ public class PlayerMove : MonoBehaviour
         //Debug.DrawRay(mousePosNearInWorld, mousePosFarInWorld - mousePosNearInWorld, Color.green);
         if (Physics.Raycast(new Ray(mousePosNearInWorld, mousePosFarInWorld - mousePosNearInWorld), out raycastHit, 1000f, layerHitNumber))
         {
-            rb.MovePosition(new Vector3(raycastHit.point.x, transform.position.y, transform.position.z));
+            float xNewPosition = raycastHit.point.x;
+            //Debug.Log(xNewPosition);
+            if(xNewPosition > maxDistanceFromCentre - halfOfWidth)
+            {
+                xNewPosition = maxDistanceFromCentre - halfOfWidth;
+            }else if (xNewPosition < -maxDistanceFromCentre + halfOfWidth)
+            {
+                xNewPosition = -maxDistanceFromCentre + halfOfWidth;
+            }
+            rb.MovePosition(new Vector3(xNewPosition, transform.position.y, transform.position.z));
         }
     }
 }

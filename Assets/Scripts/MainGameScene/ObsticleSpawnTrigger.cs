@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class ObsticleSpawnTrigger : MonoBehaviour
 {
-    ObsticleSpawner obsticleSpawner;
+    [SerializeField]
+    GameObject obsticle, coin;
+    ObsticleSpawner obsticleSpawner, coinSpawner;
     // Start is called before the first frame update
     void Start()
     {
         obsticleSpawner = GameObject.Find("GameController").GetComponent<ObsticleSpawner>();
+        coinSpawner = GameObject.Find("GameController").GetComponent<CoinSpawner>();
     }
 
     // Update is called once per frame
@@ -21,7 +24,10 @@ public class ObsticleSpawnTrigger : MonoBehaviour
     {
         if (other.CompareTag("Obsticle"))
         {
-            obsticleSpawner.SpawnRowOfObsticles();
+            obsticleSpawner.SpawnRowOfObsticles(obsticle);
+        }else if (other.CompareTag("Coin"))
+        {
+            coinSpawner.SpawnRowOfObsticles(coin, 1, 45f);
         }
     }
 }
