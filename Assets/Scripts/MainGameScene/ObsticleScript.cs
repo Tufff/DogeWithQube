@@ -4,20 +4,10 @@ using UnityEngine;
 
 public class ObsticleScript : MonoBehaviour
 {
-    [SerializeField]
-    GameObject canvas;
     // Start is called before the first frame update
     void Start()
     {
-        foreach(GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
-        {
-            if(go.name == "Canvas")
-            {
-                canvas = go;
-                break;
-            }
-        }
-        //canvas = GameObject.Find("canvas");
+
     }
 
     // Update is called once per frame
@@ -30,8 +20,7 @@ public class ObsticleScript : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
-            Time.timeScale = 0f;
-            canvas.SetActive(true);
+            FindObjectOfType<GameManager>().GameOver();
         }
     }
 }
