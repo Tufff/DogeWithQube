@@ -1164,7 +1164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42b938f75ee1074da2d4fa671db8de2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obsticle: {fileID: 3553323372543630706, guid: 087336fe054d7c047bc35227ab8a8441,
+  obsticle: {fileID: 8902027010201458224, guid: d4fac4e9bed76f046886e329c129aaa3,
     type: 3}
   numberOfObsticles: 4
 --- !u!114 &817844327
@@ -1191,7 +1191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201cd02bfcd26c241833e655682b5577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obsticle: {fileID: 919132149155446097, guid: c0aa018f315e22a4c8906629f823a60b, type: 3}
+  obsticle: {fileID: 5967660848154855279, guid: 6f931e5db57a6dc49867d39ef5aa2a0f,
+    type: 3}
   numberOfObsticles: 4
 --- !u!1 &932948326
 GameObject:
