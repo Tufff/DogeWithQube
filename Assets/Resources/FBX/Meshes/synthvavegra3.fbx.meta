@@ -1,9 +1,39 @@
 fileFormatVersion: 2
-guid: c7486d84701863649a8e6ebc04e0fa36
+guid: 0019f93c69fe5484f9cfea255b1ad316
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 59139b60430daf044b1b3356b37b7612, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: f5947d690a3a7514da9a57968f122e2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: droga
+    second: {fileID: 2100000, guid: 58d738b81e7ed5b4486c28b344137d18, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "li\u015Bcie"
+    second: {fileID: 2100000, guid: b913edb7e99d32041adc95479384d3c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: palmy
+    second: {fileID: 2100000, guid: 82dbe8767447d674696156087a4aa2a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: surface
+    second: {fileID: 2100000, guid: c773866dc923b0b4daaac294234d5080, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
