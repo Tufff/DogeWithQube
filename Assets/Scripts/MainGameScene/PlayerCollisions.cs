@@ -24,6 +24,9 @@ public class PlayerCollisions : MonoBehaviour
                 FindObjectOfType<GameManager>().AddMoney();
                 Destroy(collision.gameObject);
                 break;
+            case "Obsticle":
+                FindObjectOfType<GameManager>().GameOver();
+                break;
         }
     }
 }

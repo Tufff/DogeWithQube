@@ -1166,6 +1166,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obsticle: {fileID: 8902027010201458224, guid: d4fac4e9bed76f046886e329c129aaa3,
     type: 3}
+  spawnTriggerObject: {fileID: 3420840523061401934, guid: 92da65f6602d7b649a7d50d945d6968f,
+    type: 3}
   numberOfObsticles: 4
 --- !u!114 &817844327
 MonoBehaviour:
@@ -1191,7 +1193,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201cd02bfcd26c241833e655682b5577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obsticle: {fileID: 237974739739272046, guid: 1250540fc160fda4fb3720415402512a, type: 3}
+  obsticle: {fileID: 5967660848154855279, guid: 6f931e5db57a6dc49867d39ef5aa2a0f,
+    type: 3}
+  spawnTriggerObject: {fileID: 8345633346087144590, guid: 7b414aaf0b4d18b45abf9b6eb7635b7a,
+    type: 3}
   numberOfObsticles: 4
 --- !u!1 &932948326
 GameObject:
@@ -1649,7 +1654,7 @@ GameObject:
   - component: {fileID: 1110949465}
   - component: {fileID: 1110949464}
   - component: {fileID: 1110949463}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TunnelDestroyerOfWorlds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1839,7 +1844,7 @@ GameObject:
   - component: {fileID: 1346834904}
   - component: {fileID: 1346834903}
   - component: {fileID: 1346834902}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ObsticleTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1860,7 +1865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obsticle: {fileID: 8902027010201458224, guid: d4fac4e9bed76f046886e329c129aaa3,
     type: 3}
-  coin: {fileID: 237974739739272046, guid: 1250540fc160fda4fb3720415402512a, type: 3}
+  coin: {fileID: 5967660848154855279, guid: 6f931e5db57a6dc49867d39ef5aa2a0f, type: 3}
 --- !u!65 &1346834903
 BoxCollider:
   m_ObjectHideFlags: 0
