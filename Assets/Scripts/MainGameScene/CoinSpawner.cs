@@ -9,7 +9,7 @@ public class CoinSpawner : ObsticleSpawner
     {
         numberOfObsticles = 1;
         groundTransform = GameObject.Find("Ground").transform;
-        SpawnRowOfObsticles(obsticle, 0, 45f);
+        SpawnRowOfObsticles(obsticle, 1, 45f);
     }
 
     // Update is called once per frame

@@ -1168,7 +1168,7 @@ MonoBehaviour:
     type: 3}
   spawnTriggerObject: {fileID: 3420840523061401934, guid: 92da65f6602d7b649a7d50d945d6968f,
     type: 3}
-  numberOfObsticles: 4
+  numberOfObsticles: 3
 --- !u!114 &817844327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1197,7 +1197,7 @@ MonoBehaviour:
     type: 3}
   spawnTriggerObject: {fileID: 8345633346087144590, guid: 7b414aaf0b4d18b45abf9b6eb7635b7a,
     type: 3}
-  numberOfObsticles: 4
+  numberOfObsticles: 1
 --- !u!1 &932948326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,7 +1457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
-  maxDistanceFromCentre: 1.5
+  maxDistanceFromCentre: 1.92
 --- !u!54 &935345847
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1483,7 +1483,7 @@ BoxCollider:
   m_GameObject: {fileID: 935345845}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1542,8 +1542,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 935345845}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2, y: -0.44, z: -3.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.44, z: -3.7}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5

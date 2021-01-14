@@ -20,8 +20,8 @@ public class TunnelSpawner : MonoBehaviour
     void Start()
     {
         transformOfGround = GameObject.Find("Ground").transform;
-        SpawnRandTunnel(new Vector3(0f, -2f, 2f));
-        SpawnRandTunnel(new Vector3(0f, -2f, 180f));
+        SpawnRandTunnel(new Vector3(0f, -2f, 100f));
+        SpawnRandTunnel(new Vector3(0f, -2f, 220f));
     }
 
     // Update is called once per frame
@@ -32,6 +32,6 @@ public class TunnelSpawner : MonoBehaviour
     public void SpawnRandTunnel(Vector3 position)
     {
         int randTunnelIndex = Random.Range(0, numberOfTunnels);
-        Instantiate(tunnelsArray[randTunnelIndex], position, Quaternion.Euler(0f, 180f, 0f), transformOfGround);
+        Instantiate(tunnelsArray[randTunnelIndex], position, Quaternion.Euler(0f, 0f, 0f), transformOfGround);
     }
 }
