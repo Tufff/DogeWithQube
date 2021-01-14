@@ -22,12 +22,12 @@ public class ObsticleSpawnTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Obsticle"))
+        if (other.CompareTag("ObsticleTrigger"))
         {
             obsticleSpawner.SpawnRowOfObsticles(obsticle);
-        }else if (other.CompareTag("Coin"))
+        }else if (other.CompareTag("CoinTrigger"))
         {
-            coinSpawner.SpawnRowOfObsticles(coin, 1, 45f);
+            coinSpawner.SpawnRowOfObsticles(coin, 0, 45f);
         }
     }
 }

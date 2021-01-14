@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - Obsticle
   - Coin
+  - Tunnel
+  - ObsticleTrigger
+  - CoinTrigger
   layers:
   - Default
   - TransparentFX
@@ -18,8 +21,8 @@ TagManager:
   - 
   - PlaneForMouseInGame
   - Post processing
-  - 
-  - 
+  - SpawningTrigger
+  - TriggerPlanes
   - 
   - 
   - 

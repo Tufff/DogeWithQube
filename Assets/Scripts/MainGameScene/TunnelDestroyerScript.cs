@@ -26,8 +26,8 @@ public class TunnelDestroyerScript : MonoBehaviour
                 Destroy(other.gameObject);
                 tunnelSpawner.SpawnRandTunnel(new Vector3(0f, -2f, 180f));
                 break;
-            case "Obsticle":
-            case "Coin":
+            case "ObsticleTrigger":
+            case "CoinTrigger":
                 Destroy(other.gameObject);
                 break;
         }
