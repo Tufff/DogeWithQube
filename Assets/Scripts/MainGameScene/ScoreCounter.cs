@@ -1,15 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreCounter : MonoBehaviour
 {
     float startPositionZ;
     int score;
+    Text canvasScore;
 
-    // Start is called before the first frame update
     void Start()
     {
+        canvasScore = GameObject.Find("Canvas").transform.GetChild(0).gameObject.GetComponent<Text>();
         startPositionZ = transform.position.z;
     }
 
@@ -17,7 +19,7 @@ public class ScoreCounter : MonoBehaviour
     void Update()
     {
         score = (int)(transform.position.z + startPositionZ) / -5;
-        //Debug.Log(score);
+        canvasScore.text = score.ToString();
     }
 
     public int GetScore()

@@ -27,7 +27,7 @@ public class ObsticleSpawnTrigger : MonoBehaviour
             obsticleSpawner.SpawnRowOfObsticles(obsticle);
         }else if (other.CompareTag("CoinTrigger"))
         {
-            coinSpawner.SpawnRowOfObsticles(coin, 0, 45f);
+            coinSpawner.SpawnRowOfObsticles(coin, 0, 45f, -0.8f);
         }
     }
 }

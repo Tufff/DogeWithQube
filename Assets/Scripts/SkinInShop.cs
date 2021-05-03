@@ -13,6 +13,7 @@ public class SkinInShop : MonoBehaviour
     private MeshFilter meshFilter;
     private MeshRenderer meshRenderer;
     GameObject player;
+    GameManager gameManager;
     private MeshFilter playerMeshFilter;
     private MeshRenderer playerMeshRenderer;
 
@@ -28,6 +29,7 @@ public class SkinInShop : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Player");
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         meshFilter = skinInfo.skin.GetComponent<MeshFilter>();
         meshRenderer = skinInfo.skin.GetComponent<MeshRenderer>();
         playerMeshFilter = player.GetComponent<MeshFilter>();
@@ -42,10 +44,11 @@ public class SkinInShop : MonoBehaviour
         }
         else
         {
-            if (true)
+            if (gameManager.GetMoney() >= skinInfo.skinPrice)
             {
                 PlayerPrefs.SetInt(skinInfo.skinID.ToString(), 1);
                 IsSkinUnlocked();
+                gameManager.RemoveMoney(skinInfo.skinPrice);
             }
         }
     }

@@ -16,8 +16,8 @@ public class PlayerSkins : MonoBehaviour
     {
         playerMeshFilter = gameObject.GetComponent<MeshFilter>();
         playerMeshRenderer = gameObject.GetComponent<MeshRenderer>();
-        meshFilter = skinList[PlayerPrefs.GetInt("equipedSkin", 0) - 1].skin.GetComponent<MeshFilter>();
-        meshRenderer = skinList[PlayerPrefs.GetInt("equipedSkin", 0) - 1].skin.GetComponent<MeshRenderer>();
+        meshFilter = skinList[PlayerPrefs.GetInt("equipedSkin", 0)].skin.GetComponent<MeshFilter>();
+        meshRenderer = skinList[PlayerPrefs.GetInt("equipedSkin", 0)].skin.GetComponent<MeshRenderer>();
         if (PlayerPrefs.GetInt("equipedSkin", 0) != 0)
         {
             playerMeshFilter.mesh = meshFilter.sharedMesh;
