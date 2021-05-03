@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
         money = PlayerPrefs.GetInt("Money", 0);
         foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
         {
-            if (go.name == "Canvas")
+            if (go.name == "AfterDeath")
             {
                 canvas = go;
                 break;
