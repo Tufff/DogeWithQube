@@ -23,7 +23,7 @@ public class ObsticleSpawner : MonoBehaviour
         
     }
 
-    public void SpawnRowOfObsticles(GameObject obsticle, int minObsticles = 0, float positionZ = 40f)
+    public void SpawnRowOfObsticles(GameObject obsticle, int minObsticles = 0, float positionZ = 40f, float positionY = -0.5f)
     {
         Transform triggerTransform = Instantiate(spawnTriggerObject, new Vector3(0f, 1f, positionZ), Quaternion.identity, groundTransform).GetComponent<Transform>();
         int howManyInRow = Random.Range(minObsticles, numberOfObsticles + 1);
@@ -33,7 +33,7 @@ public class ObsticleSpawner : MonoBehaviour
             int randIndex = Random.Range(0, slotIndexes.Count);
             float leftSideX = -1.5f;
             for (int j = 1; j < slotIndexes[randIndex]; j++) { leftSideX += 1f; }
-            Instantiate(obsticle, new Vector3(leftSideX, -0.5f, positionZ), Quaternion.Euler(-90f, 0f, 0f), triggerTransform);
+            Instantiate(obsticle, new Vector3(leftSideX, positionY, positionZ), Quaternion.Euler(-90f, 0f, 0f), triggerTransform);
             
             slotIndexes.RemoveAt(randIndex);
         }
