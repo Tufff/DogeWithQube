@@ -17,6 +17,7 @@ public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     {
         backgroud = GetComponent<Image>();
         tabGroup.Subscribe(this);
+        tabGroup.TabExit(this);
     }
     
     public void OnPointerEnter(PointerEventData eventData)

@@ -9,26 +9,36 @@ public class SkinInShop : MonoBehaviour
     public SSkinInfo skinInfo;
     public Image skinImage;
     public TextMeshProUGUI buttonText;
-    //GameObject player;
+
+    private MeshFilter meshFilter;
+    private MeshRenderer meshRenderer;
+    GameObject player;
+    private MeshFilter playerMeshFilter;
+    private MeshRenderer playerMeshRenderer;
 
     public bool isSkinUnlocked = false;
 
     private void Awake()
     {
         skinImage.sprite = skinInfo.skinSprite;
+        
         IsSkinUnlocked();
     }
 
     private void Start()
     {
-        //player = GameObject.Find("Player");
+        player = GameObject.Find("Player");
+        meshFilter = skinInfo.skin.GetComponent<MeshFilter>();
+        meshRenderer = skinInfo.skin.GetComponent<MeshRenderer>();
+        playerMeshFilter = player.GetComponent<MeshFilter>();
+        playerMeshRenderer = player.GetComponent<MeshRenderer>();
     }
 
     public void OnButtonPress()
     {
         if (isSkinUnlocked)
         {
-            
+            EquipSkin();
         }
         else
         {
@@ -46,6 +56,22 @@ public class SkinInShop : MonoBehaviour
         {
             isSkinUnlocked = true;
             buttonText.text = "Equip";
+
         }
+        else
+        {
+            buttonText.text = skinInfo.skinPrice.ToString();
+        }
+    }
+
+    void EquipSkin()
+    {
+        PlayerPrefs.SetInt("equipedSkin", skinInfo.skinID);
+
+        //Debug.Log(PlayerPrefs.GetInt("skinEquiped", 0));
+
+        playerMeshFilter.mesh = meshFilter.sharedMesh;
+        playerMeshRenderer.materials = meshRenderer.sharedMaterials;
+      
     }
 }
