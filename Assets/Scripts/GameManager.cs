@@ -44,8 +44,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         canvas.SetActive(true);
         PlayerPrefs.SetInt("Money", money);
-        Debug.Log(PlayerPrefs.GetInt("Money", 0));
-        playerTransform.position = new Vector3(1.7f, 2f, playerTransform.position.z);
+        playerTransform.position = new Vector3(2.139f, 2f, playerTransform.position.z);
     }
 
     public void AddMoney(int v = 1)
