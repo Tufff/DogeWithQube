@@ -5,12 +5,13 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     GameObject canvas;
-
+    Transform playerTransform;
 
     int money = 0;
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+
         money = PlayerPrefs.GetInt("Money", 0);
         foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
         {
@@ -20,6 +21,8 @@ public class GameManager : MonoBehaviour
                 break;
             }
         }
+
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
     void Start()
     {
@@ -37,10 +40,16 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         canvas.SetActive(true);
         PlayerPrefs.SetInt("Money", money);
+        playerTransform.position = new Vector3(1.7f, 2f, playerTransform.position.z);
     }
 
     public void AddMoney(int v = 1)
     {
         money += v;
+    }
+
+    public void RemoveMoney(int v = 0)
+    {
+        money -= v;
     }
 }

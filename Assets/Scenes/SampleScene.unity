@@ -1483,7 +1483,7 @@ BoxCollider:
   m_GameObject: {fileID: 935345845}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1927,7 +1927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -15.089996, y: -9.220001}
+  m_AnchoredPosition: {x: -15.090088, y: -9.219971}
   m_SizeDelta: {x: 287.96002, y: 55.386925}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1362188070
@@ -2117,7 +2117,7 @@ GameObject:
   - component: {fileID: 1467942810}
   - component: {fileID: 1467942809}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: AfterDeath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
