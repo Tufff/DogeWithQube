@@ -1164,10 +1164,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42b938f75ee1074da2d4fa671db8de2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obsticle: {fileID: 8902027010201458224, guid: d4fac4e9bed76f046886e329c129aaa3,
-    type: 3}
-  spawnTriggerObject: {fileID: 3420840523061401934, guid: 92da65f6602d7b649a7d50d945d6968f,
-    type: 3}
+  obsticle:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   numberOfObsticles: 3
 --- !u!114 &817844327
 MonoBehaviour:
@@ -1193,10 +1193,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201cd02bfcd26c241833e655682b5577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obsticle: {fileID: 5967660848154855279, guid: 6f931e5db57a6dc49867d39ef5aa2a0f,
-    type: 3}
-  spawnTriggerObject: {fileID: 8345633346087144590, guid: 7b414aaf0b4d18b45abf9b6eb7635b7a,
-    type: 3}
+  obsticle:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   numberOfObsticles: 1
 --- !u!1 &932948326
 GameObject:
@@ -1863,9 +1863,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c87c4a580ba1e8246bd8807356d26196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obsticle: {fileID: 8902027010201458224, guid: d4fac4e9bed76f046886e329c129aaa3,
-    type: 3}
-  coin: {fileID: 5967660848154855279, guid: 6f931e5db57a6dc49867d39ef5aa2a0f, type: 3}
+  obsticle:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  coin:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!65 &1346834903
 BoxCollider:
   m_ObjectHideFlags: 0

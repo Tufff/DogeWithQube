@@ -63,9 +63,4 @@ public class GameManager : MonoBehaviour
     {
         return money;
     }
-
-    public void RemoveMoney(int v = 0)
-    {
-        money -= v;
-    }
 }
