@@ -3,7 +3,12 @@ guid: ce128dacb33a73044a9ccdec33500e24
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kula
+    second: {fileID: 2100000, guid: 52cac7830b5f8a4499adac5634d760b7, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
