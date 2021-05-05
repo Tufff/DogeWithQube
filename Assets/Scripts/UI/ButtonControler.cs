@@ -35,6 +35,7 @@ public class ButtonControler : MonoBehaviour
     public void Quit()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
     }
 
     IEnumerator LoadSceneWFade(int sceneIndex)
