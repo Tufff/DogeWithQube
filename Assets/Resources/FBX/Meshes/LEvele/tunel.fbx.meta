@@ -7,18 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: emission
-    second: {fileID: 2100000, guid: ac29d9ecdcb01604da5c39dfa8c01ecc, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "kraw\u0119dzie"
+      name: Material.002
     second: {fileID: 2100000, guid: 72c784683e3baba4fb8808311263692e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: surface
-    second: {fileID: 2100000, guid: c773866dc923b0b4daaac294234d5080, type: 2}
+      name: PANELE
+    second: {fileID: 2100000, guid: c494c335823f54b52b2e87e1b7a63a23, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: emission
+    second: {fileID: 2100000, guid: 59139b60430daf044b1b3356b37b7612, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "kraw\u0119dzie"
+    second: {fileID: 2100000, guid: 82dbe8767447d674696156087a4aa2a3, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
