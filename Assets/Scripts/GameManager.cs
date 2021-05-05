@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
                 break;
             }
         }
-        
     }
     void Start()
     {

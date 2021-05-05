@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObsticleSpawnTrigger : MonoBehaviour
 {
     [SerializeField]
-    GameObject obsticle, coin;
+    GameObject[] obsticle, coin;
     ObsticleSpawner obsticleSpawner, coinSpawner;
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,7 @@ public class ObsticleSpawnTrigger : MonoBehaviour
             obsticleSpawner.SpawnRowOfObsticles(obsticle);
         }else if (other.CompareTag("CoinTrigger"))
         {
-            coinSpawner.SpawnRowOfObsticles(coin, 0, 45f, -0.8f);
+            coinSpawner.SpawnRowOfObsticles(coin, 0, 40f, -0.8f);
         }
     }
 }
