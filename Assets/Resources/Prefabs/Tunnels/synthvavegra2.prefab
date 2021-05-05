@@ -524,7 +524,7 @@ GameObject:
   - component: {fileID: -8067076021935018305}
   m_Layer: 0
   m_Name: synthvavegra2
-  m_TagString: Untagged
+  m_TagString: Tunnel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

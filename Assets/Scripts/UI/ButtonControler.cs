@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class ButtonControler : MonoBehaviour
 {
+    [SerializeField]
+    Animator animator;
+    [SerializeField]
+    float fadeAnimationDuration = 1f;
+
     public void ResetPrefs()
     {
         PlayerPrefs.DeleteAll();
@@ -18,7 +23,7 @@ public class ButtonControler : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StartCoroutine(LoadSceneWFade(SceneManager.GetActiveScene().buildIndex + 1));
         Time.timeScale = 1f;
     }
 
@@ -30,5 +35,12 @@ public class ButtonControler : MonoBehaviour
     public void Quit()
     {
         SceneManager.LoadScene(0);
+    }
+
+    IEnumerator LoadSceneWFade(int sceneIndex)
+    {
+        animator.SetTrigger("FadeScreen");
+        yield return new WaitForSeconds(fadeAnimationDuration);
+        SceneManager.LoadScene(sceneIndex);
     }
 }

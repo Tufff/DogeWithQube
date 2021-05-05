@@ -20,8 +20,8 @@ public class TunnelSpawner : MonoBehaviour
     void Start()
     {
         transformOfGround = GameObject.Find("Ground").transform;
-        SpawnRandTunnel(new Vector3(0f, -2f, 100f));
-        SpawnRandTunnel(new Vector3(0f, -2f, 220f));
+        SpawnRandTunnel(new Vector3(0f, -1.5f, 100f));
+        SpawnRandTunnel(new Vector3(0f, -1.5f, 220f));
     }
 
     // Update is called once per frame
