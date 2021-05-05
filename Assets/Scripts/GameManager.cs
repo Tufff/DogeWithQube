@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     GameObject canvasScore;
     Text coins;
 
+    public bool gameOver = false;
+
     int money = 0;
     //[SerializeField]
     //public int upgradeMoneyMultiplier = 1;
@@ -29,6 +31,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         //upgradeMoneyMultiplier = PlayerPrefs.GetInt("upgradeMoneyMultiplier", 1);
+        gameOver = false;
         canvasScore = GameObject.Find("Canvas");
         coins = canvasScore.gameObject.transform.GetChild(1).gameObject.GetComponent<Text>();
         coins.text = PlayerPrefs.GetInt("Money", 0).ToString();
@@ -47,6 +50,7 @@ public class GameManager : MonoBehaviour
         canvas.SetActive(true);
         PlayerPrefs.SetInt("Money", money);
         playerTransform.position = new Vector3(2.139f, 2f, playerTransform.position.z);
+        gameOver = true;
     }
 
     public void AddMoney(int v = 1)

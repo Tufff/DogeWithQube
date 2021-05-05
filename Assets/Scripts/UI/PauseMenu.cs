@@ -7,18 +7,26 @@ public class PauseMenu : MonoBehaviour
     bool IsGamePaused = false;
 
     public GameObject pauseMenu;
+    GameManager gameManager;
 
+    private void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (IsGamePaused)
+            if (!gameManager.gameOver)
             {
-                Resume();
-            }
-            else
-            {
-                Pause();
+                if (IsGamePaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
             }
         }
     }
