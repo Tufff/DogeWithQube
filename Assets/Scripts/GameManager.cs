@@ -10,8 +10,10 @@ public class GameManager : MonoBehaviour
     GameObject canvasScore;
     Text coins;
 
-
     int money = 0;
+    //[SerializeField]
+    //public int upgradeMoneyMultiplier = 1;
+
     void Awake()
     {
         money = PlayerPrefs.GetInt("Money", 0);
@@ -23,10 +25,10 @@ public class GameManager : MonoBehaviour
                 break;
             }
         }
-        
     }
     void Start()
     {
+        //upgradeMoneyMultiplier = PlayerPrefs.GetInt("upgradeMoneyMultiplier", 1);
         canvasScore = GameObject.Find("Canvas");
         coins = canvasScore.gameObject.transform.GetChild(1).gameObject.GetComponent<Text>();
         coins.text = PlayerPrefs.GetInt("Money", 0).ToString();
@@ -44,12 +46,12 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         canvas.SetActive(true);
         PlayerPrefs.SetInt("Money", money);
-        Debug.Log(PlayerPrefs.GetInt("Money", 0));
-        playerTransform.position = new Vector3(1.7f, 2f, playerTransform.position.z);
+        playerTransform.position = new Vector3(2.139f, 2f, playerTransform.position.z);
     }
 
     public void AddMoney(int v = 1)
     {
+        //v *= upgradeMoneyMultiplier;
         money += v;
         coins.text = money.ToString();
     }
