@@ -4900,7 +4900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obsticle:
   - {fileID: 5967660848154855279, guid: 6f931e5db57a6dc49867d39ef5aa2a0f, type: 3}
-  spawnTriggerObject: {fileID: 3420840523061401934, guid: 92da65f6602d7b649a7d50d945d6968f,
+  spawnTriggerObject: {fileID: 8345633346087144590, guid: 7b414aaf0b4d18b45abf9b6eb7635b7a,
     type: 3}
   numberOfObsticles: 1
 --- !u!1 &829866556
