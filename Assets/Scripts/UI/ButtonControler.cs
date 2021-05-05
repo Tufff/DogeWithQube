@@ -15,4 +15,20 @@ public class ButtonControler : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void Play()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1f;
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
+    public void Quit()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
